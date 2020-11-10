@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1267
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DinnerPartyPlanner-v2.0", "DinnerPartyPlanner-v2.0\DinnerPartyPlanner-v2.0.csproj", "{72079442-3D0D-43D7-B705-68B546C76391}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{72079442-3D0D-43D7-B705-68B546C76391}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72079442-3D0D-43D7-B705-68B546C76391}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72079442-3D0D-43D7-B705-68B546C76391}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72079442-3D0D-43D7-B705-68B546C76391}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D9790AB8-AA81-42C7-84B2-902E51B8EFD6}
+	EndGlobalSection
+EndGlobal
