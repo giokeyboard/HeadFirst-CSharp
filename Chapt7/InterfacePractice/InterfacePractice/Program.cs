@@ -38,7 +38,7 @@ namespace InterfacePractice
 
     class FunnyFunny : IClown
     {
-        private string funnyThingIHave;
+        protected string funnyThingIHave;
         public string FunnyThingIHave { get { return $"Hi kids! I have a {funnyThingIHave}"; } }
 
         public FunnyFunny(string funnyThingIHave)
@@ -64,7 +64,8 @@ namespace InterfacePractice
 
         public void ScareLittleChildren()
         {
-            Console.WriteLine("Boo! Gotcha!");
+            //Console.WriteLine("Boo! Gotcha!");
+            Console.WriteLine($"You can't have my {base.funnyThingIHave}");
         }
     }
 }
