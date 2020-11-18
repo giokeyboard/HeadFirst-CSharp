@@ -25,5 +25,10 @@ namespace DuckListComparable
                 return 0;
             }
         }
+
+        public override string ToString()
+        {
+            return $"A {Size} inch {Kind.ToString()}";
+        }
     }
 }

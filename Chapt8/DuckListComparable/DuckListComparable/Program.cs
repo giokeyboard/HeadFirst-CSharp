@@ -40,7 +40,7 @@ namespace DuckListComparable
         {
             foreach (Duck duck in ducks)
             {
-                Console.WriteLine($"{duck.Size}-inch {duck.Kind}");
+                Console.WriteLine(duck);
             }
             Console.WriteLine("End of ducks!");
         }
