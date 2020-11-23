@@ -17,6 +17,8 @@ namespace GoFishGame
         public Form1()
         {
             InitializeComponent();
+            buttonStart.Enabled = true;
+            textName.Enabled = true;
         }
 
         /// <summary>

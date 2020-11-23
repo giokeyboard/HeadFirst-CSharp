@@ -72,10 +72,18 @@ namespace GoFishGame
             return cardsIHave;
         }
 
+        /// <summary>
+        /// Ask for a random value from the deck
+        /// </summary>
         public void AskForACard(List<Player> players, int myIndex, Deck stock)
         {
             // Here's an overloaded version of AskForACard()—choose a random value
             // from the deck using GetRandomValue() and ask for it using AskForACard()
+            if (stock.Count > 0)
+            {
+                if (cards.Count == 0) { cards.Add(stock.Deal()); }
+                AskForACard(players, myIndex, stock, GetRandomValue());
+            }
 
         }
 
@@ -97,7 +105,7 @@ namespace GoFishGame
             // and you'll have to add a line to the TextBox: "Joe had to draw from the stock"
             textBoxOnForm.Text += $"{name} asks if anyone has a {value}{Environment.NewLine}";
             int totalCardsGiven = 0;
-            for (int i = 0; i < players.Count; i++)
+            for (int i = 0; i < players.Count; i++) // Iterate through each player
             {
                 if (i != myIndex)   // It's not myself
                 {
