@@ -49,6 +49,9 @@ namespace GoFishGame
             return books;
         }
 
+        /// <summary>
+        /// Gets a random value from a player's cards
+        /// </summary>
         public Values GetRandomValue()
         {
             // This method gets a random value—but it has to be a value that's in the deck!
@@ -56,6 +59,9 @@ namespace GoFishGame
             return randomCard.Value;
         }
 
+        /// <summary>
+        /// Pulls out all cards with a certain value from a player's deck
+        /// </summary>
         public Deck DoYouHaveAny(Values value)
         {
             // This is where an opponent asks if I have any cards of a certain value
@@ -73,6 +79,13 @@ namespace GoFishGame
 
         }
 
+        /// <summary>
+        /// Asks other players if they have a value, otherwise deal cards from stock
+        /// </summary>
+        /// <param name="players">Other players to ask cards from</param>
+        /// <param name="myIndex">Current player index</param>
+        /// <param name="stock">The pile of cards that’s left after everyone’s dealt a hand</param>
+        /// <param name="value">Value the current player asks to other players</param>
         public void AskForACard(List<Player> players, int myIndex, Deck stock, Values value)
         {
             // Ask the other players for a value. First add a line to the TextBox: "Joe asks
@@ -86,20 +99,20 @@ namespace GoFishGame
             int totalCardsGiven = 0;
             for (int i = 0; i < players.Count; i++)
             {
-                if (i != myIndex)
+                if (i != myIndex)   // It's not myself
                 {
                     Deck cardsGiven = players[i].DoYouHaveAny(value);
                     totalCardsGiven += cardsGiven.Count;
-                    for (int j = 0; j < cardsGiven.Count; j++)
+                    for (int j = 0; j < cardsGiven.Count; j++)  // Take from other player's, put in my deck
                     {
                         cards.Add(cardsGiven.Deal());
                     }
                 }
             }
-            if (totalCardsGiven == 0)
+            if (totalCardsGiven == 0)   // No other player had the requested value
             {
                 textBoxOnForm.Text += $"{name} had to draw from the stock{Environment.NewLine}";
-                cards.Add(stock.Deal());
+                TakeCard(stock.Deal());
             }
         }
 
