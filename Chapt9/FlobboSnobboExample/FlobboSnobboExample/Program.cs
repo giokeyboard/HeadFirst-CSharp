@@ -51,7 +51,7 @@ namespace FlobboSnobboExample
 
         public StreamWriter Snobbo()
         {
-            return new StreamWriter(@"C:\Users\gfacchin\Documents\Courses\macaw.txt");
+            return new StreamWriter(@"macaw.txt");
         }
     }
 }
