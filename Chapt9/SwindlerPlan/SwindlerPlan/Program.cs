@@ -11,7 +11,7 @@ namespace SwindlerPlan
     {
         static void Main(string[] args)
         {
-            StreamWriter sw = new StreamWriter(@"C:\Users\gfacchin\Documents\Courses\secret_plan.txt");
+            StreamWriter sw = new StreamWriter(@"C:\Users\gfacchin\Documents\secret_plan2.txt");
             sw.WriteLine("How I’ll defeat Captain Amazing");
             sw.WriteLine("Another genius secret plan by The Swindler");
             sw.Write("I’ll create an army of clones and ");

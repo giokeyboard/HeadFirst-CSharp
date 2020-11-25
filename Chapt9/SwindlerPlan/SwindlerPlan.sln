@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.1300
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwindlerPlan", "SwindlerPlan\SwindlerPlan.csproj", "{07B064C0-47DA-4245-9572-E0CC877DA04F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwindlerPlanReading", "SwindlerPlanReading\SwindlerPlanReading.csproj", "{68D53D79-384A-4693-B57C-792077205798}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{07B064C0-47DA-4245-9572-E0CC877DA04F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{07B064C0-47DA-4245-9572-E0CC877DA04F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{07B064C0-47DA-4245-9572-E0CC877DA04F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68D53D79-384A-4693-B57C-792077205798}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68D53D79-384A-4693-B57C-792077205798}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68D53D79-384A-4693-B57C-792077205798}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68D53D79-384A-4693-B57C-792077205798}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
