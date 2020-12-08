@@ -54,6 +54,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -62,6 +65,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -79,10 +83,26 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="Resources\bat.png" />
+    <None Include="Resources\wizard1.png" />
+    <None Include="Resources\sword1.png" />
+    <None Include="Resources\shield1.png" />
+    <None Include="Resources\quiver1.png" />
+    <None Include="Resources\potion_red1.png" />
+    <None Include="Resources\potion_blue1.png" />
+    <None Include="Resources\player1.png" />
+    <None Include="Resources\mace1.png" />
+    <None Include="Resources\ghoul1.png" />
+    <None Include="Resources\ghost1.png" />
+    <None Include="Resources\dungeon600x4002.png" />
+    <None Include="Resources\bow1.png" />
+    <None Include="Resources\bomb1.png" />
+    <None Include="Resources\battleaxe1.png" />
+    <None Include="Resources\bat1.png" />
     <Content Include="Resources\battleaxe.png" />
     <Content Include="Resources\bomb.png" />
     <Content Include="Resources\bow.png" />
     <Content Include="Resources\dungeon600x400.png" />
+    <None Include="Resources\dungeon600x4001.png" />
     <Content Include="Resources\ghost.png" />
     <Content Include="Resources\ghoul.png" />
     <Content Include="Resources\mace.png" />
