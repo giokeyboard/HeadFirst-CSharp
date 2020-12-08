@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ExcuseManager
 {
+    [Serializable]
     class Excuse
     {
         public string Description { get; internal set; }
@@ -26,28 +28,42 @@ namespace ExcuseManager
 
         public Excuse(Random random, string folder)
         {
-            string[] fileNames = Directory.GetFiles(folder, "*.txt");
+            string[] fileNames = Directory.GetFiles(folder, "*.excuse");
             OpenFile(fileNames[random.Next(fileNames.Length)]);
         }
 
         private void OpenFile(string path)
         {
             ExcusePath = path;
-            using (StreamReader reader = new StreamReader(path))
+            //using (StreamReader reader = new StreamReader(path))
+            //{
+            //    Description = reader.ReadLine();
+            //    Results = reader.ReadLine();
+            //    LastUsed = Convert.ToDateTime(reader.ReadLine());
+            //}
+            using (Stream input = File.OpenRead(path))
             {
-                Description = reader.ReadLine();
-                Results = reader.ReadLine();
-                LastUsed = Convert.ToDateTime(reader.ReadLine());
+                BinaryFormatter bf = new BinaryFormatter();
+                Excuse temp = (Excuse)bf.Deserialize(input);
+                Description = temp.Description;
+                Results = temp.Results;
+                LastUsed = temp.LastUsed;
             }
         }
 
         public void Save(string fileName)
         {
-            using (StreamWriter writer = new StreamWriter(fileName))
+            //using (StreamWriter writer = new StreamWriter(fileName))
+            //{
+            //    writer.WriteLine(Description);
+            //    writer.WriteLine(Results);
+            //    writer.WriteLine(LastUsed);
+            //}
+
+            using (Stream output = File.OpenWrite(fileName))
             {
-                writer.WriteLine(Description);
-                writer.WriteLine(Results);
-                writer.WriteLine(LastUsed);
+                BinaryFormatter bf = new BinaryFormatter();
+                bf.Serialize(output, this);
             }
         }
     }
